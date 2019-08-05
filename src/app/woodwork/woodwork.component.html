@@ -1,1 +1,15 @@
-<p>woodwork works!</p>
+<div class="container" style="margin-top:90px">
+    <div class="row">
+        <h1>Woodwork</h1>
+    </div>
+    <div class="row">
+        <div class="col-12">
+        <slideshow [imageUrls]="imageUrlArray"
+                   [height]="'400px'" 
+                   [showArrows]="false"
+                   [autoPlay]="true"
+                   [autoPlayInterval]="2000"
+        ></slideshow>
+        </div>
+    </div>
+</div>

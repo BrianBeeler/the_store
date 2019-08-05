@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationLink } from './navigation/navigation.link.model';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent {
+
+  updatePage(link:NavigationLink) {
+    this.currentPage = link.link;
+  }
+
   title = 'theStore';
-  currentPage = 'main-page';
+  currentPage = '/#/home-page';
 }

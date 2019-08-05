@@ -11,7 +11,7 @@ import { EnlargedComponent } from './woodwork/enlarged/enlarged.component';
 import { ContactUsModalComponent } from './contact-us-modal/contact-us-modal.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { InMemoryPageComponent } from './in-memory-page/in-memory-page.component';
-
+import { SlideshowModule } from 'ng-simple-slideshow';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { InMemoryPageComponent } from './in-memory-page/in-memory-page.component
   imports: [
     BrowserModule,
     FontAwesomeModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

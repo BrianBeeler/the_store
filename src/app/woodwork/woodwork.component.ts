@@ -9,6 +9,12 @@ export class WoodworkComponent implements OnInit {
 
   constructor() { }
 
+  imageUrlArray = [
+    '/assets/images/kaite-table-3.jpg',
+    '/assets/images/katie-feenie-table.jpg',
+    '/assets/images/katie-table-2.jpg'
+  ];
+
   ngOnInit() {
   }
 
