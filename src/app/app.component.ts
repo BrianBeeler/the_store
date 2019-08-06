@@ -10,6 +10,7 @@ export class AppComponent {
 
   updatePage(link:NavigationLink) {
     this.currentPage = link.link;
+    console.log('current page:', this.currentPage);
   }
 
   title = 'theStore';
