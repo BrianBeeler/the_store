@@ -16,6 +16,11 @@ export class NavigationComponent implements OnInit {
 
   constructor() { }
 
+  show:boolean = false;
+  toggleCollapse() {
+    this.show = !this.show;
+  }
+
   navLinks: NavigationLink[] = [
     new NavigationLink('Home', '/#/home-page', true),
     new NavigationLink('Woodwork', '/#/woodwork-page', false),
@@ -39,6 +44,7 @@ export class NavigationComponent implements OnInit {
         }
       });
       this.changePage.emit(newActiveNav);
+      this.show = false;
     }
   }
 
