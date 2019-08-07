@@ -4,7 +4,7 @@ import { NavigationLink } from './navigation/navigation.link.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./app.component.less'],
 })
 export class AppComponent {
 
