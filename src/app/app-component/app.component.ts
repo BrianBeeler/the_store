@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationLink } from './navigation/navigation.link.model';
+import { NavigationLink } from '../header-and-footer-components/navigation/navigation.link.model';
 
 @Component({
   selector: 'app-root',

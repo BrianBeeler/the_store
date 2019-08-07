@@ -1,36 +1,53 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { WoodworkComponent } from './woodwork/woodwork.component';
-import { CardComponent } from './woodwork/card/card.component';
-import { EnlargedComponent } from './woodwork/enlarged/enlarged.component';
-import { ContactUsModalComponent } from './contact-us-modal/contact-us-modal.component';
-import { AboutPageComponent } from './about-page/about-page.component';
-import { InMemoryPageComponent } from './in-memory-page/in-memory-page.component';
+import { AppComponent } from './app-component/app.component';
+import { NavigationComponent } from './header-and-footer-components/navigation/navigation.component';
+import { FooterContentComponent } from './header-and-footer-components/footer/footer-content.component';
+import { HomeComponent } from './route-components/home/home.component';
+import { CraftsComponent } from './route-components/crafts/crafts.component';
+import { AboutComponent } from './route-components/about/about.component';
+import { InMemoryComponent } from './route-components/in-memory/in-memory.component';
 import { SlideshowModule } from 'ng-simple-slideshow';
+import { Routes, RouterModule } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', 
+    component: HomeComponent
+  },
+  { path: 'crafts', 
+    component: CraftsComponent
+  },
+  { path: 'about', 
+    component: AboutComponent
+  },
+  { path: 'in-memory', 
+    component: InMemoryComponent
+  }
+];
 
 @NgModule({
-  declarations: [
+  declarations: 
+  [
+    // App
     AppComponent,
-    NavigationComponent,
 
-    FooterComponent,
-    HomePageComponent,
-    WoodworkComponent,
-    CardComponent,
-    EnlargedComponent,
-    ContactUsModalComponent,
-    AboutPageComponent,
-    InMemoryPageComponent
+    // Header and Footer
+    NavigationComponent,
+    FooterContentComponent,
+
+    // Main Routes
+    HomeComponent,
+    CraftsComponent,
+    AboutComponent,
+    InMemoryComponent
+
   ],
   imports: [
     BrowserModule,
     FontAwesomeModule,
-    SlideshowModule
+    SlideshowModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
