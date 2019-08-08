@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { NavigationLink } from './navigation.link.model'
-
+import { NavigationLink } from './navigation.link.model';
 
 @Component({
   selector: 'app-navigation',
@@ -17,12 +16,18 @@ export class NavigationComponent implements OnInit {
   constructor() { }
 
   show:boolean = false;
+  
   toggleCollapse() {
     this.show = !this.show;
   }
 
+  activeOptions = {
+    exact: true,
+
+  };
+
   navLinks: NavigationLink[] = [
-    new NavigationLink('Home', '/home', true),
+    new NavigationLink('Home', '', true),
     new NavigationLink('Woodwork', '/crafts', false),
     new NavigationLink('About', '/about', false),
     new NavigationLink('In Memory', '/in-memory', false)
