@@ -1,12 +1,10 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { NavigationLink } from './navigation.link.model';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.less']
 })
-
 
 
 export class NavigationComponent implements OnInit {
