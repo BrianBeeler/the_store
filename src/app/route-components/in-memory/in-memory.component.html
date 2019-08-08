@@ -1,20 +1,21 @@
 <div class="viewport">
-    <jumbo-container>
-        <h1>In Loving Memory</h1>
-        <p>Mary Lou and Wendell Beeler<p>
-        <p>(Mamae and Grandad)</p>
-        <p>Emily Beeler</p>
-    </jumbo-container>
-
-
-
-            <div class="row">
-                <div class="container">
-                    <div class="col-12">
-                        <div class="img-container" *ngFor="let imageSrc of inMemoryImages">
-                            <img class='rotate-90' [src]="imageSrc">
-                        </div>
+    <div class="content-width-container">
+        <jumbo-container>
+            <h1>In Loving Memory</h1>
+            <p>Mary Lou and Wendell Beeler<p>
+            <p>(Mamae and Grandad)</p>
+            <p>Emily Beeler</p>
+            <p>Molly Harlan</p>
+        </jumbo-container>
+    
+        <div class="row">
+            <div class="container">
+                <div class="col-12">
+                    <div class="img-container" *ngFor="let imageSrc of inMemoryImages">
+                        <img class='rotate-90' [src]="imageSrc">
                     </div>
                 </div>
             </div>
+        </div>
     </div>
+</div>
