@@ -9,6 +9,8 @@ export class InMemoryComponent implements OnInit {
 
   constructor() { }
 
+  inMemoryImages: string[] = [];
+
   ngOnInit() {
   }
 
