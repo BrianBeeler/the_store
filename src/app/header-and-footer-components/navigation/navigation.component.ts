@@ -11,30 +11,29 @@ import { NavigationLink } from './navigation.link.model';
 
 export class NavigationComponent implements OnInit {
 
-  @Output() changePage = new EventEmitter();
-
   constructor() { }
 
+  // Toggle Hamburger Menu
   show:boolean = false;
-  
+
   toggleCollapse() {
     this.show = !this.show;
   }
 
+  // For angular activeRouteOptions
   activeOptions = {
     exact: true,
-
   };
 
-  navLinks: NavigationLink[] = [
-    new NavigationLink('Home', '', true),
-    new NavigationLink('Woodwork', '/crafts', false),
-    new NavigationLink('About', '/about', false),
-    new NavigationLink('In Memory', '/in-memory', false)
+  // List of Navigable Pages
+  navLinks: {name:string, link:string}[] = [
+    // 
+    { name: 'Home', link: '' },
+    { name: 'Crafts', link: '/crafts' },
+    { name: 'About', link: '/about' },
+    { name: 'In Memory', link: '/in-memory' },
   ] 
 
-  ngOnInit() {
-    console.log(this.navLinks);
-  }
+  ngOnInit() {}
 
 }
