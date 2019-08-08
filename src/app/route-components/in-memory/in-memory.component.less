@@ -1,12 +1,22 @@
 .container {
     background: snow;
-    opacity: 0.85;
+
+    &.jumbotron {
+        opacity: 0.85;
+        margin-top: 30px;
+    }
+
     text-align: center;
     padding-top: 20px;
-    margin-top: 25%;
     @media screen and (max-width:575px) {
         margin-top: 0;
     }
     font-family: "Open Sans SemiBold";
     font-size: 16px;
+}
+
+
+img {
+    width: 100%;
+    margin-bottom: 20px;
 }
