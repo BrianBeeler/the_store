@@ -10,7 +10,7 @@
                    routerLinkActive="active"
                   [routerLinkActiveOptions]="{exact: true}" 
                 >
-                    <a class="nav-link" [routerLink]="navLink.link">{{navLink.name}}<span *ngIf="navLink.isActive" class="sr-only">(current)</span></a>
+                    <a class="nav-link" [routerLink]="navLink.link" (click)="show = false">{{navLink.name}}<span *ngIf="navLink.isActive" class="sr-only">(current)</span></a>
             </li>
         </ul>
     </div>
