@@ -7,13 +7,16 @@
         <br>
         <div class="row">
             <div class="col-12">
-            <slideshow [imageUrls]="imageUrlArray"
-                       [height]="'350px'" 
-                       [showArrows]="true"
-                       [autoPlay]="true"
-                       [autoPlayInterval]="2500"
-                       class=""
-            ></slideshow>
+                <div class="my-slideshow-container">
+                    <slideshow #slideshow 
+                                [imageUrls]="imageUrlArray"
+                                [height]="'350px'" 
+                                [showArrows]="true"
+                                [autoPlay]="true"
+                                [autoPlayInterval]="2500"
+                                
+                    ></slideshow>
+                </div>
             </div>
            <div class="col-12 quote-column">
             <div class="quote-container">
