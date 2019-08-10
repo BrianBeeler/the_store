@@ -2,7 +2,10 @@
     <div class="container no-border">
         <div class="col-12">
             <div class="img-container" *ngFor="let imageSrc of photos">
-                <img class='rotate-90' [src]="imageSrc">
+                <figure class="figure">
+                    <img class="figure-img rounded" [src]="imageSrc">
+                    <figcaption class="floating-caption rounded">Test</figcaption>
+                </figure>
             </div>
         </div>
     </div>
