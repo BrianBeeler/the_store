@@ -9,7 +9,7 @@ export class InMemoryComponent implements OnInit {
 
   constructor() { }
 
-  inMemoryImages: string[] = [
+  inMemoryPhotos: string[] = [
     'assets/images/mini-golf.jpg',
     'assets/images/grandads_shop.jpg',
     'assets/images/emily_photo.jpg',

@@ -9,6 +9,10 @@ export class AboutComponent implements OnInit {
 
   constructor() { }
 
+  shopPhotos: string[] = [
+    'assets/images/grandads_shop.jpg'
+  ];
+
   ngOnInit() {
   }
 

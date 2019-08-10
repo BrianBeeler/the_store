@@ -9,6 +9,7 @@ import { CraftsComponent } from './route-components/crafts/crafts.component';
 import { AboutComponent } from './route-components/about/about.component';
 import { InMemoryComponent } from './route-components/in-memory/in-memory.component';
 import { JumboContainerComponent } from './shared/jumbo-container/jumbo-container.component';
+import { PhotoViewerComponent } from './shared/photo-viewer/photo-viewer.component';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -61,6 +62,8 @@ const appRoutes: Routes = [
 
     // Shared
     JumboContainerComponent,
+
+    PhotoViewerComponent,
 
   ],
   imports: [

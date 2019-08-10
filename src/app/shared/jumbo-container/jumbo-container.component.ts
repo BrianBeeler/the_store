@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'jumbo-container',
+    selector: 'app-jumbo-container',
     templateUrl: './jumbo-container.component.html',
     styleUrls: ['./jumbo-container.component.less'] 
 })
