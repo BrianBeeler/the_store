@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app-component/app.component';
@@ -13,17 +13,33 @@ import { SlideshowModule } from 'ng-simple-slideshow';
 import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: '', 
-    component: HomeComponent
+  { 
+    path: '', 
+    component: HomeComponent,
+    data: {
+      title: 'The Store - Home'
+    }
   },
-  { path: 'crafts', 
-    component: CraftsComponent
+  { 
+    path: 'crafts', 
+    component: CraftsComponent,
+    data: {
+      title: 'The Store - Crafts'
+    }
   },
-  { path: 'about', 
-    component: AboutComponent
+  { 
+    path: 'about', 
+    component: AboutComponent,
+    data: {
+      title: 'The Store - About'
+    }
   },
-  { path: 'in-memory', 
-    component: InMemoryComponent
+  { 
+    path: 'in-memory', 
+    component: InMemoryComponent,
+    data: {
+      title: 'The Store - In Memory'
+    }
   }
 ];
 
@@ -53,7 +69,7 @@ const appRoutes: Routes = [
     SlideshowModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ Title ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
