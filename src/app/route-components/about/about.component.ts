@@ -10,7 +10,7 @@ export class AboutComponent implements OnInit {
 
   constructor() { }
 
-  shopPhotos: string = [
+  shopPhotos: ViewFigure[] = [
     new ViewFigure('assets/images/grandads_shop.jpg', "Grandad's Woodwork")
   ];
 

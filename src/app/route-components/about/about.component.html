@@ -1,17 +1,11 @@
 <div class="viewport">
     <div class="content-width-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="jumbotron vertical-center">
-                        <h1>About</h1>
-                        <p>The Store, not-so-creatively named after my grandpa’s woodworking shop continues the family tradition of woodworking and crafts.</p>
-                        <p>I love the challenge of creating something new.</p>
-                        <p>All glory to God for the talents He has given me.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <app-jumbo-container>
+            <h1>About</h1>
+            <p>The Store, not-so-creatively named after my grandpa’s woodworking shop continues the family tradition of woodworking and crafts.</p>
+            <p>I love the challenge of creating something new.</p>
+            <p>All glory to God for the talents He has given me.</p>
+        </app-jumbo-container>
+        <app-photo-viewer [photos]="shopPhotos"></app-photo-viewer>
     </div>
-    <app-photo-viewer [photos]="shopPhotos"></app-photo-viewer>
 </div>
