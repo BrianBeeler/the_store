@@ -2,6 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
+Impliments:
+    Bootstrap 4 (https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+    ng-simple-slideshow (https://www.npmjs.com/package/ng-simple-slideshow)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
