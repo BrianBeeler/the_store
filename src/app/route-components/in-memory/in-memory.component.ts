@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewFigure } from 'src/app/shared/models/viewFigure';
 
 @Component({
   selector: 'app-in-memory',
@@ -9,10 +10,10 @@ export class InMemoryComponent implements OnInit {
 
   constructor() { }
 
-  inMemoryPhotos: string[] = [
-    'assets/images/mini-golf.jpg',
-    'assets/images/emily_photo.jpg',
-    'assets/images/molly_harlan.jpg'
+  inMemoryPhotos: {}[] = [
+    new ViewFigure('assets/images/mini-golf.jpg', ''),
+    new ViewFigure('assets/images/emily_photo.jpg', ''),
+    new ViewFigure('assets/images/molly_harlan.jpg', '')
   ];
 
   ngOnInit() {

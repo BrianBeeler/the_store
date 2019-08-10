@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewFigure } from 'src/app/shared/models/viewFigure';
 
 @Component({
   selector: 'app-about',
@@ -9,8 +10,8 @@ export class AboutComponent implements OnInit {
 
   constructor() { }
 
-  shopPhotos: string[] = [
-    'assets/images/grandads_shop.jpg'
+  shopPhotos: string = [
+    new ViewFigure('assets/images/grandads_shop.jpg', "Grandad's Woodwork")
   ];
 
   ngOnInit() {

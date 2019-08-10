@@ -1,12 +1,13 @@
 <div class="row neg-30-margins">
     <div class="container no-border">
         <div class="col-12">
-            <div class="img-container" *ngFor="let imageSrc of photos">
-                <figure class="figure">
-                    <img class="figure-img rounded" [src]="imageSrc">
-                    <figcaption class="floating-caption rounded">Test</figcaption>
-                </figure>
-            </div>
+            <figure class="figure" *ngFor="let figure of photos">
+                <img class="figure-img rounded" [src]="figure.src">
+                <figcaption 
+                    *ngIf="figure.caption" 
+                    class="floating-caption rounded">{{figure.caption}}
+                </figcaption>
+            </figure>
         </div>
     </div>
 </div>
