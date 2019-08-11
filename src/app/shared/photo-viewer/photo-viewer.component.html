@@ -1,8 +1,8 @@
 
-            <figure class="figure" *ngFor="let figure of photos">
-                <img class="rounded" [src]="figure.src">
-                <figcaption 
-                    *ngIf="figure.caption" 
-                    class="floating-caption rounded yellow-wallpaper">{{figure.caption}}
-                </figcaption>
-            </figure>
+<figure class="figure" *ngFor="let figure of photos">
+    <img class="rounded-top" [src]="figure.src">
+    <figcaption 
+        *ngIf="figure.caption" 
+        class="rounded-bottom yellow-wallpaper border-dark-no-top">{{figure.caption}}
+    </figcaption>
+</figure>

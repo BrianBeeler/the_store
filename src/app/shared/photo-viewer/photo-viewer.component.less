@@ -1,6 +1,7 @@
 img {
     width: 100%;
-    border: 2px solid #ffcc33;
+    border: 1px solid #ffcc33;
+    border-bottom: 0;
 }
 
 .neg-30-margins {
@@ -12,17 +13,10 @@ img {
     border: none;
 }
 
-.floating-caption {
-    position: relative;
-    bottom: 37px;
-    background-color: #ffcc33;
-    width: 98%;
-    display: inline-block;
-    opacity: 0.92;
-    font-family: "Open Sans SemiBold";
-    @media screen and (max-width:575px) {
-        bottom: 32px
-    }
+figcaption {
+    margin-left: -1px;
+    margin-right: 1px;
+
 }
 
 figure {
@@ -50,7 +44,6 @@ figure, figure:first-child {
         figcaption {
             bottom: 0px;
             width: 100%;
-            border: 1px solid #212529;
         }
         img {
             border-bottom: 0;
