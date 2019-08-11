@@ -1,6 +1,6 @@
 img {
     width: 100%;
-    border: 1px solid #212529;
+    border: 2px solid #ffcc33;
 }
 
 .neg-30-margins {
@@ -14,11 +14,15 @@ img {
 
 .floating-caption {
     position: relative;
-    bottom: 38px;
-    background-color: snow;
+    bottom: 37px;
+    background-color: #ffcc33;
     width: 98%;
     display: inline-block;
-    opacity: 0.85;
+    opacity: 0.92;
+    font-family: "Open Sans SemiBold";
+    @media screen and (max-width:575px) {
+        bottom: 32px
+    }
 }
 
 figure {
@@ -35,4 +39,21 @@ figure:last-child {
 
 img:last-child {
     margin-bottom: 0;
+}
+
+figure, figure:first-child {
+    @media screen and (max-width:575px) {
+        margin: 1px 2px;
+    
+        font-size: 14px;
+        margin-top: 1px;
+        figcaption {
+            bottom: 0px;
+            width: 100%;
+            border: 1px solid #212529;
+        }
+        img {
+            border-bottom: 0;
+        }
+    }
 }
