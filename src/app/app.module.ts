@@ -61,8 +61,6 @@ const appRoutes: Routes = [
     InMemoryComponent,
 
     // Shared
-    JumboContainerComponent,
-
     PhotoViewerComponent,
 
   ],
