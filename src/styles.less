@@ -1,4 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+@import './variables.less';
+
 @font-face {
     font-family: "Open Sans Bold";
     src: url(assets/fonts/OpenSans-Bold.ttf);
@@ -49,34 +50,19 @@
     src: url(assets/fonts/OpenSans-SemiBoldItalic.ttf);
 }
 
-// Colors
-@dark-theme-color: #212529;
-@golden-color: #ffcc33;
-
-
-// Borders
-@dark-border: 1px solid @dark-theme-color;
-@golden-border: 1px solid @golden-color;
-
-// Heights
-@navHeight: 56px;
-@footerHeight: 88px; 
-
-// Background Images
-@homeBackground: url(/assets/images/store_fall_faded_lowres.jpg);
-@fadedBackground: url();
-
 // For Other Class
+.auto-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .centered-background {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
     background-position-y: center;
 }
-.scroll-y {
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
+
 .full-sized-fixed {
     top: 0;
     bottom: 0;
@@ -84,52 +70,47 @@
     width: 100%;
 }
 
+.no-bottom-border {
+    border-bottom: none !important;
+}
 
+.no-top-border {
+    border-top: none !important;
+}
+
+.rounded {
+    border-radius: .25rem!important;
+}
+
+.scroll-y {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.yellow-wallpaper {
+    background-image: @yellowWallpaper;
+    background-repeat: repeat;
+}
+
+
+
+// Used in Application
 .viewport {
-    
     margin-top: @navHeight;
     margin-bottom: @footerHeight;
     background-image: @homeBackground;
-
     &:extend(.centered-background);
     &:extend(.scroll-y);
     &:extend(.full-sized-fixed);
 }
 
-.heading-row {
-    text-align: center;
-    color: darkblue;
-    background-color: snow;
-    opacity: 0.75;
-}
-
 .content-width-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 720px;
-    text-align: center;
-    h1 {
-        // background:white;
-        opacity: 0.9;
-        margin: 1rem;
-        padding: 0.5rem;
-        color: green;
-        width: fit-content;
-        display: inline-block;
-    }
+    max-width: @ContentMaxWidth;
+    &:extend(.auto-center);
 }
 
-p {
-    font-family: "Open Sans Regular";
-    font-size: 16px;
-}
-
-h1,h2,h3, h4 {
-    font-family: "Open Sans SemiBold";
-}
-
-.container {
-    border: 1px solid #212529;
+h1,h2,h3,h4 {
+    font-family: @semibold;
 }
 
 .rounded-top {
@@ -137,39 +118,56 @@ h1,h2,h3, h4 {
     border-top-right-radius: .25rem!important; 
 }
 
-.rounded-bottom {
-    border-bottom-left-radius: 0.25rem!important;
-    border-bottom-right-radius: 0.25rem!important;
-}
-
-
 .details-container {
-    color: #212529;
-    opacity: 0.92;
+    color: @dark-theme-color;
+    opacity: @theme-opacity;
+    text-align: center;
     margin-top: 1rem;
     padding: 1rem;
-    font-family: 18rem;
-    border: 2px solid #212529;
-    p {
-        font-family: "Open Sans SemiBold";
+    font-size: 1.1rem;
+    border: @dark-border;
+    &:extend(.yellow-wallpaper);
+    font-family:@semibold;
+    &:extend(.rounded);
+}
+
+
+// Figures
+figure img {
+    border: @golden-border;
+    &:extend(.rounded);
+    &.captioned {
+        &:extend(.no-bottom-border);
+        &:extend(.rounded-top);
     }
-
+    width: 100%;
 }
 
-.border-dark-no-top {
-    border-bottom: 1px solid #212529;
-    border-left: 1px solid #212529;
-    border-right: 1px solid #212529;
+figure figcaption {
+    border: @dark-border;
+    &:extend(.no-top-border);
+    &:extend(.rounded-bottom);
+    &:extend(.yellow-wallpaper);
+    font-family: @semibold;
+    margin-left: -1px;
+    margin-right: 1px;
+    text-align: center;
 }
 
 
-.yellow-wallpaper {
-    background-image: url(assets/images/yellow_wallpaper.jpg);
-    background-repeat: repeat;
+
+
+
+// Main Header And Footer
+
+footer {
+    background-color: @dark-theme-color!important;
+    color: @white;
+    margin-bottom: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+    font-family: "Open Sans SemiBold"
 }
 
-// .jumbotron {
-//     @media (min-width: 576px) {
-//         padding: 2rem 2rem;
-//     }
-// }

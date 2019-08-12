@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   shopPhotos: ViewFigure[] = [
-    new ViewFigure('assets/images/grandads_shop.jpg', "Grandad's Woodwork")
+    new ViewFigure('assets/images/grandads_shop.jpg', "Grandad's Woodwork", 'grandads-woodwork')
   ];
 
   ngOnInit() {

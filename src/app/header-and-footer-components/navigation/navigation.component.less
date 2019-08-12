@@ -1,3 +1,27 @@
+@import url(../../../variables.less);
+
 .navbar {
-    font-family: "Open Sans SemiBold"
+    font-family: @semibold;
+    background-color: @dark-theme-color!important;
+    a {
+        color: @white50;
+        &:hover {
+            color: @white75;
+        }
+    }
+    .active a {
+        color: @white;
+    }
+    .navbar-toggler {
+        color: @white50 !important;
+        border-color: @white10 !important;
+    }
+    .navbar-brand {
+        color: @white;
+        &:hover {
+            color: @white;
+        }
+    }
+
 }
+

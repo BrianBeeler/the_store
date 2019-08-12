@@ -11,9 +11,9 @@ export class InMemoryComponent implements OnInit {
   constructor() { }
 
   inMemoryPhotos: {}[] = [
-    new ViewFigure('assets/images/mini-golf.jpg', ''),
-    new ViewFigure('assets/images/emily_photo_2.jpg', ''),
-    new ViewFigure('assets/images/molly_harlan.jpg', '')
+    new ViewFigure('assets/images/mini-golf.jpg', '', ''),
+    new ViewFigure('assets/images/emily_photo_2.jpg', '', ''),
+    new ViewFigure('assets/images/molly_harlan.jpg', '', '')
   ];
 
   ngOnInit() {
