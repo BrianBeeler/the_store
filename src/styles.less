@@ -98,6 +98,15 @@
 
 blockquote p {
     font-family: @semiboldItalic;
+    color: @dark-theme-color;
+}
+
+.blockquote {
+    margin-bottom: 0.75rem;
+}
+
+.blockquote-footer {
+    color: @dark-theme-color;
 }
 
 .content-width-container {
@@ -109,7 +118,7 @@ blockquote p {
     color: @dark-theme-color;
     opacity: @theme-opacity;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     padding: 1rem;
     font-size: 1.1rem;
     border: @dark-border;
@@ -118,6 +127,7 @@ blockquote p {
     &:extend(.rounded);
     p {
         font-size: 1.1rem;
+        color: @dark-theme-color;
     }
     @media screen and (max-width:575px) {
         margin: 1px 0;
@@ -176,20 +186,24 @@ figure figcaption {
     text-align: center;
 }
 
-// Slideshow
+// Slideshow Overwrites
 
 .arrow-container:hover:before {
     opacity: 0.75 !important;
-    color: @dark-theme-color;
-    width: 50px;
 }
 
 .arrow-container {
     .next {
         right: 10px !important;
+        border-left: @golden-border !important;
+        border-top: @golden-border !important;
+        border-width: 3px !important;
     }
     .prev {
         left: 10px !important;
+        border-left: @golden-border !important;
+        border-top: @golden-border !important;
+        border-width:  3px !important;
     }
 }
 
