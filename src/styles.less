@@ -49,26 +49,51 @@
     src: url(assets/fonts/OpenSans-SemiBoldItalic.ttf);
 }
 
+// Colors
+@dark-theme-color: #212529;
+@golden-color: #ffcc33;
 
 
-body {
-    background-color: snow;
+// Borders
+@dark-border: 1px solid @dark-theme-color;
+@golden-border: 1px solid @golden-color;
+
+// Heights
+@navHeight: 56px;
+@footerHeight: 88px; 
+
+// Background Images
+@homeBackground: url(/assets/images/store_fall_faded_lowres.jpg);
+@fadedBackground: url();
+
+// For Other Class
+.centered-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
 }
-
-.viewport {
-    margin-top: 56px; // Nav Height
-    margin-bottom: 88px; // Footer Height
+.scroll-y {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.full-sized-fixed {
     top: 0;
     bottom: 0;
     position: fixed;
     width: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    background-image: url(/assets/images/store_fall_faded_lowres.jpg);
-    background-position-y: center;
+}
+
+
+.viewport {
+    
+    margin-top: @navHeight;
+    margin-bottom: @footerHeight;
+    background-image: @homeBackground;
+
+    &:extend(.centered-background);
+    &:extend(.scroll-y);
+    &:extend(.full-sized-fixed);
 }
 
 .heading-row {

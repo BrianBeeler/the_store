@@ -1,41 +1,31 @@
 <div class="viewport">
 
     <div class="content-width-container">
-        <!-- <app-jumbo-container> -->
-            <h1 class="rounded">Crafts</h1>
-        <!-- </app-jumbo-container> -->
-        <br>
-        <div class="row">
-            <div class="col-12">
-                <div class="my-slideshow-container" aria-role="presentation" tabindex="0">
-                    <slideshow #slideshow 
-                                [imageUrls]="imageUrlArray"
-                                [height]="'350px'" 
-                                [showArrows]="true"
-                                [autoPlay]="true"
-                                [autoPlayInterval]="2500"
-                                
-                    ></slideshow>
-                </div>
-            </div>
-           <div class="col-12 quote-column">
-            <div class="quote-container">
-                <blockquote class="blockquote">
-                    <p class="mb-0">"Katie is so talented. She hand makes each piece with love and care. I have some of her work in my house and I LOVE it.  I highly recommend her."</p>
-                    <br>
-                    <footer class="blockquote-footer">Facebook Review</footer>
-                </blockquote>
-            </div>
-           </div> 
+        <div class="details-container rounded yellow-wallpaper">
+            <blockquote class="blockquote">
+                <p class="mb-0">"Katie is so talented. She hand makes each piece with love and care. I have some of her work in my house and I LOVE it.  I highly recommend her."</p>
+                <br>
+                <footer class="blockquote-footer">Dana Warren</footer>
+            </blockquote>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="call-to-action justify-content-center">
-                        <h2>Interested in crafts from 'The Store'?</h2>
-                        <p>Let her know if you have any ideas you'd like to see come to life.</p>
-                        <a href="https://www.facebook.com/The-Store-462788197612474/"><button class="button btn btn-primary"> Message on Facebook</button></a>
-                </div>
-            </div>   
+        <br>
+        
+        <div class="gold-border dark-border yellow-wallpaper">
+            <slideshow #slideshow 
+                [imageUrls]="imageUrlArray"
+                [height]="'30rem'"
+                [showArrows]="false"
+                [autoPlay]="true"
+                [autoPlayInterval]="'3500'"   
+                [stopAutoPlayOnSlide]="true"    
+                class="gold-border"          
+            ></slideshow>
+        </div>
+
+        <div class="details-container yellow-wallpaper dark-border rounded">
+            <h2>Interested in crafts from 'The Store'?</h2>
+            <p>Let her know if you have any ideas you'd like to see come to life.</p>
+            <a href="https://www.facebook.com/The-Store-462788197612474/"><button class="button btn btn-primary"> Message on Facebook</button></a>
         </div>
     </div>
 </div>
