@@ -6,10 +6,10 @@
                 <footer class="blockquote-footer">Dana Warren</footer>
             </blockquote>
         </div>      
-        <div class="my-slideshow-container">
+        <div class="my-slideshow-container" #slideshowcontainer (window:resize)="onResize($event)">
             <slideshow #slideshow 
                 [imageUrls]="imageUrlArray"
-                [height]="'500px'"
+                [height]="slideshowHeight"
                 [showArrows]="true"
                 [autoPlay]="true"
                 [autoPlayInterval]="3500"   

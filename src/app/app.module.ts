@@ -8,7 +8,6 @@ import { HomeComponent } from './main-route-components/home/home.component';
 import { CraftsComponent } from './main-route-components/crafts/crafts.component';
 import { AboutComponent } from './main-route-components/about/about.component';
 import { InMemoryComponent } from './main-route-components/in-memory/in-memory.component';
-import { JumboContainerComponent } from './shared/jumbo-container/jumbo-container.component';
 import { PhotoViewerComponent } from './shared/photo-viewer/photo-viewer.component';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { Routes, RouterModule } from '@angular/router';
