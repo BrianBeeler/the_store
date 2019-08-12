@@ -50,7 +50,7 @@
     src: url(assets/fonts/OpenSans-SemiBoldItalic.ttf);
 }
 
-// For Other Class
+// For Extending other selectors
 .auto-center {
     margin-left: auto;
     margin-right: auto;
@@ -94,28 +94,15 @@
 
 
 
-// Used in Application
-.viewport {
-    margin-top: @navHeight;
-    margin-bottom: @footerHeight;
-    background-image: @homeBackground;
-    &:extend(.centered-background);
-    &:extend(.scroll-y);
-    &:extend(.full-sized-fixed);
+// Used in multiple places
+
+blockquote p {
+    font-family: @semiboldItalic;
 }
 
 .content-width-container {
     max-width: @ContentMaxWidth;
     &:extend(.auto-center);
-}
-
-h1,h2,h3,h4 {
-    font-family: @semibold;
-}
-
-.rounded-top {
-    border-top-left-radius: .25rem!important;
-    border-top-right-radius: .25rem!important; 
 }
 
 .details-container {
@@ -129,8 +116,43 @@ h1,h2,h3,h4 {
     &:extend(.yellow-wallpaper);
     font-family:@semibold;
     &:extend(.rounded);
+    p {
+        font-size: 1.1rem;
+    }
+    @media screen and (max-width:575px) {
+        margin: 1px 0;
+        font-size: 14px;
+        padding: 0.2rem;
+        p {
+            margin: 0.5rem;
+            line-height: 17px;
+            font-size: 14px;
+        }
+    }
 }
 
+h1,h2,h3,h4,p {
+    font-family: @semibold;
+}
+
+.rounded-top {
+    border-top-left-radius: .25rem!important;
+    border-top-right-radius: .25rem!important; 
+}
+
+.slideshow-container {
+    &:extend(.rounded);
+    border: @golden-border;
+}
+
+.viewport {
+    margin-top: @navHeight;
+    margin-bottom: @footerHeight;
+    background-image: @homeBackground;
+    &:extend(.centered-background);
+    &:extend(.scroll-y);
+    &:extend(.full-sized-fixed);
+}
 
 // Figures
 figure img {
@@ -152,22 +174,5 @@ figure figcaption {
     margin-left: -1px;
     margin-right: 1px;
     text-align: center;
-}
-
-
-
-
-
-// Main Header And Footer
-
-footer {
-    background-color: @dark-theme-color!important;
-    color: @white;
-    margin-bottom: 50px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-bottom: 0;
-    font-family: "Open Sans SemiBold"
 }
 
