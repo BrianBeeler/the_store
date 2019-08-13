@@ -11,8 +11,13 @@ export class CraftsComponent implements OnInit {
 
   autoPlay = true;
 
-  disableAutoPlay() {
-    this.autoPlay = false;
+  handleAutoPlay($event: MouseEvent) {
+    let targetEl: HTMLElement = (<HTMLInputElement>event.target);
+    
+    if (targetEl.classList.contains('slides') || targetEl.classList.contains('pause-button') ) {
+      this.autoPlay = !this.autoPlay;
+    }
+    
   }
 
   @HostListener('window.resize', ['$event'])

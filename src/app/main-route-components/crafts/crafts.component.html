@@ -6,8 +6,8 @@
                 <footer class="blockquote-footer">Dana Warren</footer>
             </blockquote>
         </div>      
-        <div class="my-slideshow-container" (click)="autoPlay = !autoPlay" (window:resize)="onResize($event)">
-            <div [ngClass]="autoPlay ? 'pause' : 'play' " [ngStyle]="{'top': pauseTop}"></div>
+        <div class="my-slideshow-container" (click)="handleAutoPlay($event)" (window:resize)="onResize($event)">
+            <div [ngClass]="autoPlay ? 'pause' : 'play' " class="pause-button"[ngStyle]="{'top': pauseTop}"></div>
             <slideshow #slideshow 
                 [imageUrls]="imageUrlArray"
                 [height]="slideshowHeight"
