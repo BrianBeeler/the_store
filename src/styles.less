@@ -130,7 +130,8 @@ blockquote p {
         color: @dark-theme-color;
     }
     @media screen and (max-width:575px) {
-        margin: 1px 0;
+        margin: 0;
+        border-radius: 0 !important;
         font-size: 14px;
         padding: 0.2rem;
         p {
@@ -138,6 +139,9 @@ blockquote p {
             line-height: 17px;
             font-size: 14px;
         }
+    }
+    &:last-child {
+        margin-bottom:0.5rem;
     }
 }
 
@@ -147,12 +151,29 @@ h1,h2,h3,h4,p {
 
 .rounded-top {
     border-top-left-radius: .25rem!important;
-    border-top-right-radius: .25rem!important; 
+    border-top-right-radius: .25rem!important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
+
+.rounded-bottom {
+    border-top-left-radius: 0!important;
+    border-top-right-radius: 0!important;
+    border-bottom-right-radius: .25rem!important;
+    border-bottom-left-radius: .25rem!important;
+}
+
 
 .slideshow-container {
     &:extend(.rounded);
     border: @golden-border;
+    @media screen and (max-width: 575px) {
+        border: none;
+        border-radius: none !important;
+    }
+    @media screen and (min-width:720px) and (orientation:portrait), (max-width:575px) and (min-height:750px) {
+        border: @golden-border !important;
+    }
 }
 
 .viewport {
@@ -164,10 +185,8 @@ h1,h2,h3,h4,p {
     &:extend(.full-sized-fixed);    
 }
 
-@maxAspectRatio : "(max-aspect-ratio: 32/57)";
-
 .vertically-even-content {
-    @media screen and (min-width:720px) and (orientation:portrait), (max-width:520px) and (min-height:720px) {
+    @media screen and (min-width:720px) and (orientation:portrait), (max-width:575px) and (min-height:720px) {
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
@@ -187,14 +206,15 @@ figure img {
     width: 100%;
 }
 
+figure {
+    // border-top: @golden-border;
+}
+
 figure figcaption {
     border: @dark-border;
-    &:extend(.no-top-border);
     &:extend(.rounded-bottom);
     &:extend(.yellow-wallpaper);
     font-family: @semibold;
-    margin-left: -1px;
-    margin-right: 1px;
     text-align: center;
 }
 
