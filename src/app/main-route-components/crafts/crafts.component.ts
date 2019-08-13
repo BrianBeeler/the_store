@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-crafts',
@@ -9,15 +9,26 @@ export class CraftsComponent implements OnInit {
 
   constructor() { }
 
+  autoPlay = true;
+
+  disableAutoPlay() {
+    this.autoPlay = false;
+  }
+
   @HostListener('window.resize', ['$event'])
   onResize(event) {
-    this.slideshowHeight = this.getSlideshowHeight();
+    let height = this.getSlideshowHeight();
+    this.slideshowHeight = height+"px";
+    this.pauseTop = ((height/2)+5)+'px';
   }
 
   getSlideshowHeight() {
-    return (window.innerWidth < 720 ? ((window.innerWidth - 5)/ 1.44) : 500)+'px';
+    return (window.innerWidth < 720 ? ((window.innerWidth - 5)/ 1.44) : 475);
   }
-  slideshowHeight = this.getSlideshowHeight();
+
+  
+  slideshowHeight = this.getSlideshowHeight()+'px';
+  pauseTop = ((this.getSlideshowHeight()/2)+5) + 'px';
 
   imageUrlArray = [
     '/assets/images/kaite-table-3.jpg',

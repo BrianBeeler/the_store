@@ -161,7 +161,14 @@ h1,h2,h3,h4,p {
     background-image: @homeBackground;
     &:extend(.centered-background);
     &:extend(.scroll-y);
-    &:extend(.full-sized-fixed);
+    &:extend(.full-sized-fixed);    
+}
+
+.vertically-even-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
 }
 
 // Figures
