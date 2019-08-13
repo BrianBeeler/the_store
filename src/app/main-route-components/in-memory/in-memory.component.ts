@@ -12,7 +12,7 @@ export class InMemoryComponent implements OnInit {
 
   inMemoryPhotos: {}[] = [
     new ViewFigure('assets/images/mini-golf-optimized.jpg', '', ''),
-    new ViewFigure('assets/images/emily_photo-optimized.jpg', '', ''),
+    new ViewFigure('assets/images/emily-photo-optimized.jpg', '', ''),
     new ViewFigure('assets/images/molly_harlan-optimized.jpg', '', '')
   ];
 
