@@ -36,17 +36,17 @@ export class CraftsComponent implements OnInit {
   pauseTop = ((this.getSlideshowHeight()/2)+5) + 'px';
 
   imageUrlArray = [
-    '/assets/images/kaite-table-3.jpg',
-    '/assets/images/finished-table.jpg',
-    '/assets/images/thingy.jpg',
-    '/assets/images/coffee-table.jpg',
-    '/assets/images/beeler.jpg',
-    '/assets/images/wood-ky.jpg',
-    '/assets/images/uk_sign.jpg',
-    '/assets/images/coasters.jpg',
-    '/assets/images/foundation.jpg',
-    '/assets/images/simple_rules.jpg',
-    '/assets/images/be_still.jpg'
+    '/assets/images/kaite-table-3-optimized.jpg',
+    '/assets/images/finished-table-optimized.jpg',
+    '/assets/images/thingy-optimized.jpg',
+    '/assets/images/coffee-table-optimized.jpg',
+    '/assets/images/beeler-optimized.jpg',
+    '/assets/images/wood-ky-optimized.jpg',
+    '/assets/images/uk_sign-optimized.jpg',
+    '/assets/images/coasters-optimized.jpg',
+    '/assets/images/foundation-optimized.jpg',
+    '/assets/images/simple_rules-optimized.jpg',
+    '/assets/images/be_still-optimized.jpg'
   ];
 
   ngOnInit() {

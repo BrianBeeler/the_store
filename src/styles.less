@@ -130,8 +130,8 @@ blockquote p {
         color: @dark-theme-color;
     }
     @media screen and (max-width:575px) {
-        margin: 0;
-        border-radius: 0 !important;
+        margin: 0.5rem;
+        // border-radius: 0 !important;
         font-size: 14px;
         padding: 0.2rem;
         p {
@@ -167,13 +167,6 @@ h1,h2,h3,h4,p {
 .slideshow-container {
     &:extend(.rounded);
     border: @golden-border;
-    @media screen and (max-width: 575px) {
-        border: none;
-        border-radius: none !important;
-    }
-    @media screen and (min-width:720px) and (orientation:portrait), (max-width:575px) and (min-height:750px) {
-        border: @golden-border !important;
-    }
 }
 
 .viewport {
@@ -186,12 +179,16 @@ h1,h2,h3,h4,p {
 }
 
 .vertically-even-content {
-    @media screen and (min-width:720px) and (orientation:portrait), (max-width:575px) and (min-height:720px) {
+    @media screen and (min-height:750px) {
         display: flex;
         justify-content: space-evenly;
         flex-direction: column;
         height: 100%;
     };
+
+    @media screen and (min-height:750px) and (min-width: 800px) {
+        display: block;
+    }
 
 }
 
@@ -204,11 +201,11 @@ figure img {
         &:extend(.rounded-top);
     }
     width: 100%;
+    // @media screen and (min-width:721px) {
+    //     width:720px;
+    // }
 }
 
-figure {
-    // border-top: @golden-border;
-}
 
 figure figcaption {
     border: @dark-border;

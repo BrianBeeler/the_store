@@ -10,7 +10,6 @@ export class PhotoViewerComponent implements OnInit {
 
   @Input('photos') photos: ViewFigure[];
 
-
   constructor() { }
 
   ngOnInit() {
