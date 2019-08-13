@@ -164,11 +164,16 @@ h1,h2,h3,h4,p {
     &:extend(.full-sized-fixed);    
 }
 
+@maxAspectRatio : "(max-aspect-ratio: 32/57)";
+
 .vertically-even-content {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    height: 100%;
+    @media screen and (min-width:720px) and (orientation:portrait), (max-width:520px) and (min-height:720px) {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        height: 100%;
+    };
+
 }
 
 // Figures
