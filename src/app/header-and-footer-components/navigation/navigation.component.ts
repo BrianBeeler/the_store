@@ -9,28 +9,29 @@ import { Component, OnInit} from '@angular/core';
 
 export class NavigationComponent implements OnInit {
 
+  activeOptions = {
+    exact: true,
+  };
+
+  // List of Navigable Pages
+  navLinks: {name: string, link: string}[] = [
+    { name: 'Home', link: '' },
+    { name: 'Crafts', link: '/crafts' },
+    { name: 'About', link: '/about' },
+    { name: 'In Memory', link: '/in-memory' },
+  ];
+
+
   constructor() { }
 
   // Toggle Hamburger Menu
-  show:boolean = false;
+  show = false;
 
   toggleCollapse() {
     this.show = !this.show;
   }
 
   // For angular activeRouteOptions
-  activeOptions = {
-    exact: true,
-  };
-
-  // List of Navigable Pages
-  navLinks: {name:string, link:string}[] = [
-    // 
-    { name: 'Home', link: '' },
-    { name: 'Crafts', link: '/crafts' },
-    { name: 'About', link: '/about' },
-    { name: 'In Memory', link: '/in-memory' },
-  ] 
 
   ngOnInit() {}
 

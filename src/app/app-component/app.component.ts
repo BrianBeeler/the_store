@@ -9,14 +9,14 @@ import { Router, Event, NavigationEnd, ActivatedRoute } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   constructor(private titleService: Title, private router: Router, private activatedRoute: ActivatedRoute) {
-    
+
     // On Navigation End, Set Page Title
     router.events.subscribe( (event: Event) => {
       if (event instanceof NavigationEnd) {
         this.setCurrentTitle();
       }
-    })
-  
+    });
+
   }
 
   setCurrentTitle() {
@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
   getPageTitle(url: string) {
 
     let pageTitle = 'The Store';
-    
+
     if (url === '/' || url === '/home') {
       pageTitle += ' - Home';
     } else if (url === '/crafts') {
@@ -41,8 +41,8 @@ export class AppComponent implements OnInit {
   }
 
 
-  public setTitle ( url: string) {
-    let newTitle = this.getPageTitle(url);
+  public setTitle( url: string) {
+    const newTitle = this.getPageTitle(url);
     this.titleService.setTitle(newTitle);
   }
 

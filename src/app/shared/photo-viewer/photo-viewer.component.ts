@@ -8,7 +8,7 @@ import { ViewFigure } from 'src/app/shared/models/viewFigure';
 })
 export class PhotoViewerComponent implements OnInit {
 
-  @Input('photos') photos: ViewFigure[];
+  @Input() photos: ViewFigure[];
 
   constructor() { }
 

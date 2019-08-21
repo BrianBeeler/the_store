@@ -7,4 +7,40 @@
             </div>
         <app-photo-viewer [photos]="shopPhotos"></app-photo-viewer>
     </div>
+    <div class="form-conainer details-container">
+            <h1>Contact Us</h1>
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input 
+                        class="form-control"
+                        id="email" 
+                        name="email"
+                        type="text"
+                        ngModel 
+                        email
+                        required
+                        #email="ngModel"
+                    >
+                    <p *ngIf="!email.valid && email.touched" class="form-text text-muted">Please enter a valid email.</p>
+                    <!-- <p *ngIf="!(email.valid || email.pristine)">Email is required.</p> -->
+                </div>
+                <label for="message">Message:</label>
+                <div class="form-group">
+                    <textarea
+                        class="form-control"
+                        id="message"
+                        name="message"
+                        ngModel
+                        required
+                        #message="ngModel"
+                    ></textarea>
+                    <p *ngIf="!message.valid && message.touched" class="form-text text-muted">Message Is Required</p>
+                </div>
+                <button
+                    class="btn btn-primary"
+                    [disabled]="!f.valid"
+                >Send</button>
+            </form>
+        </div>
 </div>

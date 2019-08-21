@@ -11,31 +11,34 @@ import { InMemoryComponent } from './main-route-components/in-memory/in-memory.c
 import { PhotoViewerComponent } from './shared/photo-viewer/photo-viewer.component';
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 const appRoutes: Routes = [
-  { 
-    path: '', 
+  {
+    path: '',
     component: HomeComponent,
     data: {
       title: 'The Store - Home'
     }
   },
-  { 
-    path: 'crafts', 
+  {
+    path: 'crafts',
     component: CraftsComponent,
     data: {
       title: 'The Store - Crafts'
     }
   },
-  { 
-    path: 'about', 
+  {
+    path: 'about',
     component: AboutComponent,
     data: {
       title: 'The Store - About'
     }
   },
-  { 
-    path: 'in-memory', 
+  {
+    path: 'in-memory',
     component: InMemoryComponent,
     data: {
       title: 'The Store - In Memory'
@@ -44,7 +47,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: 
+  declarations:
   [
     // App
     AppComponent,
@@ -67,6 +70,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FontAwesomeModule,
     SlideshowModule,
+    FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ Title ],

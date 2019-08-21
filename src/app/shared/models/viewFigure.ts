@@ -1,3 +1,3 @@
 export class ViewFigure {
-    constructor(private src:string, private caption:string, private containerId: string) { }
+    constructor(private src: string, private caption: string, private containerId: string) { }
 }
