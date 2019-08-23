@@ -3,6 +3,7 @@ const config = require('./config');
 const sendgrid = require('sendgrid');
 const client = sendgrid(config.SENDMAIL_API_KEY);
 
+
 function parseBody(body) {
     var helper = sendgrid.mail;
     var fromEmail = new helper.Email(body.from);
