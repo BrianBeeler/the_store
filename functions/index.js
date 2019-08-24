@@ -2,12 +2,13 @@ const functions = require('firebase-functions');
 const config = require('./config');
 const sendgrid = require('sendgrid');
 const client = sendgrid(config.SENDMAIL_API_KEY);
+const fromEmailStr = config.FROM_EMAIL;
+const toEmailStr = config.TO_EMAIL;
 
-
-function parseBody(body) {
+function parseBody(body, fromEmailStr, toEmailStr) {
     var helper = sendgrid.mail;
-    var fromEmail = new helper.Email(body.from);
-    var toEmail = new helper.Email(body.to);
+    var fromEmail = new helper.Email(fromEmailStr);
+    var toEmail = new helper.Email(toEmailStr);
     var subject = body.subject;
     var content = new helper.Content('text/html', body.content);
     var mail = new helper.Mail(fromEmail, subject, toEmail, content);
@@ -26,7 +27,7 @@ exports.httpEmail = functions.https.onRequest((req, res) => {
         const request = client.emptyRequest({
             method: 'POST',
             path: '/v3/mail/send',
-            body: parseBody(req.body)
+            body: parseBody(req.body, fromEmailStr, toEmailStr)
         });
 
         return client.API(request);

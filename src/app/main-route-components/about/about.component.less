@@ -2,3 +2,33 @@
 input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
     border: red solid 1px;
 }
+
+.form-container .form-group {
+    text-align: left;
+    .text-muted {
+        color: red !important;
+        font-size: 0.9em;
+    }
+    padding: 0.5rem;
+    &.form-status {
+        text-align: center;
+    }
+}
+
+.form-container .form-success {
+    background-color: #e8ffe8;
+    outline: 1px solid #c5d9c5;
+    color: #2d9965;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+}
+
+.form-container .form-failure {
+    background-color: #ffe8e8;
+    outline: 1px solid #c5d9c5;
+    color: 	#99652d;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    padding: 0.5rem
+}

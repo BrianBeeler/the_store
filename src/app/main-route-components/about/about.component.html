@@ -6,8 +6,7 @@
                 <p>All glory to God for the talents He has given me.</p>
             </div>
         <app-photo-viewer [photos]="shopPhotos"></app-photo-viewer>
-    </div>
-    <div class="form-conainer details-container">
+        <div class="form-container details-container">
             <h1>Contact Us</h1>
             <form (ngSubmit)="onSubmit(f)" #f="ngForm">
                 <div class="form-group">
@@ -22,25 +21,48 @@
                         required
                         #email="ngModel"
                     >
-                    <p *ngIf="!email.valid && email.touched" class="form-text text-muted">Please enter a valid email.</p>
+                    <p *ngIf="!email.valid && email.touched" class="form-text text-muted">A valid email is required.</p>
                     <!-- <p *ngIf="!(email.valid || email.pristine)">Email is required.</p> -->
                 </div>
-                <label for="message">Message:</label>
+                
                 <div class="form-group">
+                    <label for="email">Your Name:</label>
+                    <input 
+                        class="form-control"
+                        id="name" 
+                        name="name"
+                        type="text"
+                        ngModel 
+                        required
+                        maxlength="30"
+                        #name="ngModel"
+                    >
+                    <p *ngIf="!name.valid && name.touched" class="form-text text-muted">A name is required.</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
                     <textarea
                         class="form-control"
                         id="message"
                         name="message"
                         ngModel
                         required
+                        maxlength="150"
                         #message="ngModel"
                     ></textarea>
-                    <p *ngIf="!message.valid && message.touched" class="form-text text-muted">Message Is Required</p>
+                    <p *ngIf="!message.valid && message.touched" class="form-text text-muted">A message Is Required</p>
+                </div>
+                <div class="form-group form-status">
+                	<p class="form-success" *ngIf="messageSent">Your message was sent!</p>
+                	<p class="form-failure" *ngIf="messageError">There was a problem sending your message. Please try again later.</p>
                 </div>
                 <button
                     class="btn btn-primary"
-                    [disabled]="!f.valid"
+                    [disabled]="!f.valid || formDisabled"
                 >Send</button>
             </form>
         </div>
+    </div>
+
 </div>
